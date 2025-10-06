@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+        <!-- Root Menu -->
+    <menuitem id="estate_root_menu" name="Estate">
+        <!-- Child Menu that uses the action -->
+        <menuitem id="estate_property" 
+                  name="Estate Property" 
+                  action="estate_action"/>
+
+        <menuitem id="estate_property_settings" name="Settings">
+            <menuitem id="estate_property_type_menu" name="Property Type" action="estate_Property_type_action"></menuitem>
+            <menuitem id="estate_buyer_menu" name="Estate Buyer" action="estate_buyer_action"></menuitem>
+            <menuitem id="estate_seller_menu" name="Estate Seller" action="estate_seller_action"></menuitem>
+        </menuitem>
+    </menuitem>
+</odoo>
