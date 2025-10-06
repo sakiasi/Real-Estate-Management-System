@@ -43,6 +43,16 @@ class EstateModel(models.Model):
     string="Property Type"
 )
     
+    salesman = fields.Many2one(
+        'res.partner',
+        string='Salesman'
+    )
+    
+    buyer = fields.Many2one(
+        'estate_buyer',
+        string='Estate Buyer'
+    )
+    
     # living_area + garden_area    
     total_area = fields.Float(compute='_compute_total', string='Total Area')
 

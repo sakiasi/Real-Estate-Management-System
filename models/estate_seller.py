@@ -9,3 +9,4 @@ class EstateSeller(models.Model):
     address = fields.Text(string='Address')
     contact = fields.Char(string='Content')
     email = fields.Char(string='Email')
+    
