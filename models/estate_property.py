@@ -56,6 +56,12 @@ class EstateModel(models.Model):
     # living_area + garden_area    
     total_area = fields.Float(compute='_compute_total', string='Total Area')
 
+    # Tag
+    tag_ids = fields.Many2many(
+        'estate_tag',
+        string='Estate Tag'
+    )
+
     @api.depends('living_area','garden_area')    
     def _compute_total(self):
         for records in self:
