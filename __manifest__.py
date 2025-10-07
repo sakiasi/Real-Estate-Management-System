@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-
 {
     'name': 'Estate',
     'author':'saki',
@@ -13,7 +10,7 @@
     'depends': [
         'base',
     ],
-    'license': 'LGPL-3',   # Choose appropriate license (e.g., LGPL-3, OPL-1)
+    'license': 'LGPL-3',
     'data': [
         'security/ir.model.access.csv',
         'views/estate_property_views.xml',
