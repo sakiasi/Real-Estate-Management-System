@@ -61,6 +61,9 @@ class EstateModel(models.Model):
         'estate_tag',
         string='Estate Tag'
     )
+    
+    best_price = fields.Float(compute='_compute_best_price',string='Best Price', store = True)
+    
 
     @api.depends('living_area','garden_area')    
     def _compute_total(self):
@@ -68,3 +71,12 @@ class EstateModel(models.Model):
             records.total_area = records.living_area * records.garden_area
 
     offer_ids = fields.One2many('estate_offer','property_id', string='Offers')
+    
+    # Compute best price
+    @api.depends('offer_ids.price')
+    def _compute_best_price(self):
+        for property in self:
+            if property.offer_ids:
+                property.best_price = max(property.offer_ids.mapped('price'))
+            else:
+                property.best_price = 0.0

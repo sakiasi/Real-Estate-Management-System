@@ -118,6 +118,7 @@
                                             <field name="tag_ids" widget='many2many_tags'></field>
                                             <field width='50' placeholder='Enter Postcode' string='Postcode' name="postcode"></field>
                                             <field width='50' placeholder='Enter Date' string='Available From' name="date_availability"></field>
+                                            <field name="best_price"></field>
                                         </group>
                                         <group>
                                             <field width='50' string='Expected Price' name="expected_price"></field>
