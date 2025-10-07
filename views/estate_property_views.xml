@@ -147,7 +147,7 @@
                         </page>
                         <page string="Offers">
                             <field name="offer_ids">
-                                <list editable="bottom">
+                                <list>
                                     <field name="buyer_id"/>
                                     <field name="price"/>
                                     <field name="status"/>
